@@ -15,7 +15,7 @@ const config = {
   },
 
   test: {
-    db: { uri: `${process.env.MONGODB_HOST}:27017/test_deal` },
+    db: { uri: `${process.env.MONGODB_HOST}:27017/test_notifications` },
     env: 'test',
   },
   staging: { },
