@@ -2,7 +2,7 @@ const _ = require('lodash');
 
 const config = {
   development: {
-    app: { port: Number(process.env.APP_PORT, 10) || 3000 },
+    app: { port: Number(process.env.APP_PORT, 10) || 5000 },
 
     db: { uri: process.env.MONGODB_URI },
 
