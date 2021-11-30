@@ -4,7 +4,9 @@
   "description": "service to handele notifications",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "docker-compose up --build -d && docker attach api",
+    "bye": "docker-compose down",
+    "dev": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,18 @@
   "bugs": {
     "url": "https://github.com/ammar2Mo/notifications-service/issues"
   },
-  "homepage": "https://github.com/ammar2Mo/notifications-service#readme"
+  "homepage": "https://github.com/ammar2Mo/notifications-service#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.9",
+    "mongoose-errors": "^1.1.0"
+  }
+
 }
