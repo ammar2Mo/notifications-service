@@ -4,9 +4,14 @@
   "description": "service to handele notifications",
   "main": "src/server.js",
   "scripts": {
+    "lint": "eslint --ignore-path .gitignore . --fix",
+    "depcheck": "npm-check -y",
+    "pretest": "npm run lint",
+    "coverage": "nyc npm run test",
     "start": "docker-compose up --build -d && docker attach api",
     "bye": "docker-compose down",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "prepush": "rm -rf node_modules/ && npm i && npm run depcheck"
   },
   "repository": {
     "type": "git",
